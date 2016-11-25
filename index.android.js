@@ -12,13 +12,15 @@ import {
   Text,
 } from 'react-native';
 
+// 导入自己创建的模块要与node_modules分隔一行
+import formatDate from './src/formatDate';
 
 
 
 export default class ReactNativeBase extends Component {
   render() {
     return (
-      <Text>Hello world!</Text>
+      <Text>Hello world! At {formatDate(new Date())}</Text>
     );
   }
 }
