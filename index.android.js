@@ -14,28 +14,13 @@ import {
   Image,
 } from 'react-native';
 
-// 导入自己创建的模块要与node_modules分隔一行
-import formatDate from './src/formatDate';
-
-// 组件名必须大写
-function Comment(props) {
-  return (
-    <View>
-      <Image  
-        source={{uri: props.author.avatarUrl}}
-        style={style.avatar}
-      />
-      <Text>{props.author.name}</Text>
-      <Text>{props.text}</Text>
-      <Text>{formatDate(props.date)}</Text>
-    </View>
-  );
-}
+// 这里其实是 import { Comment, Avatar, UserInfo } from './src/component/index.js';
+import { Comment, Avatar, UserInfo } from './src/component';
 
 export default class ReactNativeBase extends Component {
   render() {
     return (
-      <Comment {...COMMENT_DATA} />
+      <Comment { ...COMMENT_DATA } />
     );
   }
 }
@@ -51,11 +36,5 @@ const COMMENT_DATA = {
   }
 } 
 
-let style = {
-  avatar: {
-    height: 64,
-    width: 64,
-  }
-}
 
 AppRegistry.registerComponent('ReactNativeBase', () => ReactNativeBase);
