@@ -15,14 +15,22 @@ import {
 // 导入自己创建的模块要与node_modules分隔一行
 import formatDate from './src/formatDate';
 
+/*
 function Welcome(props) {
   return <Text>Hello, {props.name}!</Text>;
+}
+*/
+
+class Welcome extends Component {
+  render() {
+    return <Text>Hello, {this.props.name}!</Text>;
+  }
 }
 
 export default class ReactNativeBase extends Component {
   render() {
     return (
-      <Welcome name="World" />
+      <Welcome name="Class Component" />
     );
   }
 }
