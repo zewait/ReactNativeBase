@@ -11,15 +11,14 @@ import {
   AppRegistry,
   Text,
 } from 'react-native';
+import { Clock } from 'src/component';
 
 
 
 
 export default class ReactNativeBase extends Component {
   render() {
-    return (
-      <Text>Hello world!</Text>
-    );
+    return <Clock />;
   }
 }
 
