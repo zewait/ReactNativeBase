@@ -10,10 +10,14 @@ export default class Clock extends Component {
   }
 
   componentDidMount() {
-    setInterval(
+    this.timerID = setInterval(
       () => this.tick(),
       1000
     );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
   }
 
   tick() {
