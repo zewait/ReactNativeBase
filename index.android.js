@@ -5,21 +5,20 @@
  */
 
 // es6 module package
-import React from 'react';
-const Component = React.Component;
+import React, { Component } from 'react';
 import {
   AppRegistry,
   Text,
+  View,
+  TextInput,
 } from 'react-native';
-import { Clock } from 'src/component';
 
-
-
-
+import { Clock } from './src/component';
 export default class ReactNativeBase extends Component {
   render() {
     return <Clock />;
   }
 }
+
 
 AppRegistry.registerComponent('ReactNativeBase', () => ReactNativeBase);
