@@ -12,13 +12,15 @@ import {
   Text,
 } from 'react-native';
 
-
-
+import {
+  Calculator,
+  TemperatureInput
+} from './src/component';
 
 export default class ReactNativeBase extends Component {
   render() {
     return (
-      <Text>Hello world!</Text>
+      <Calculator />
     );
   }
 }
